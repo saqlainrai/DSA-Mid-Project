@@ -1,0 +1,1 @@
+# This is a sample text ti initialize the Git Repo on GitLab

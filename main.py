@@ -7,7 +7,7 @@ def FetchAndSaveDataToFile(url, path):
         f.write(response.text)
 
 def main():
-    url = "Assalam o alakum
+    url = "http://127.0.0.1:5500/sample.html"
     path = "data/times.html"
     FetchAndSaveDataToFile(url, path)
 

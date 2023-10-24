@@ -63,20 +63,12 @@ def main_run():
             else:
                 location_text = "N/A"
                 location_list.append(location_text)
-            # print("Title:", title)
-            # print("Price:", price_text)
-            # print("Shipping:", shipping_text)
-            # print("sold amount", sold_text)
-            # print("location", location_text)
-        # Check if there's a "Next" button to move to the next page
 
         print(len(t_list))
         print(len(price_list))
         print(len(shipping_list))
         print(len(sold_list))
         print(len(location_list))
-
-
 
         next_button = soup.find("a", class_="pagination__next")
         if next_button:

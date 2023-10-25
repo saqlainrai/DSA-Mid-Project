@@ -1,0 +1,13 @@
+# this one is my code
+# window = MyMainWindow()
+# ui.sortBtn.clicked.connect(button_click_action)
+ui.sortBtn.clicked.connect(lambda: manual_load(ui.dataGridView))
+
+# remove maximize button
+# window.setWindowFlags(window.windowFlags() & ~Qt.WindowMaximizeButtonHint)
+
+# remove header
+# window.setWindowFlags(Qt.Window | Qt.CustomizeWindowHint)
+
+# set fixed size
+window.setFixedSize(1300, 730)

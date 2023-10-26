@@ -1,13 +1,21 @@
+from assist import *
+from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QApplication, QMainWindow
+from PyQt5.QtCore import Qt
+
+
 # this one is my code
-# window = MyMainWindow()
-# ui.sortBtn.clicked.connect(button_click_action)
-ui.sortBtn.clicked.connect(lambda: manual_load(ui.dataGridView))
+        # window = MyMainWindow()
+        # ui.sortBtn.clicked.connect(button_click_action)
+        ui.loadBtn.clicked.connect(lambda: manual_load(ui.dataGridView, 'data.csv'))
+        ui.sortBtn.clicked.connect(lambda: sort_clicked(ui))
+        ui.searchBtn.clicked.connect(lambda: search_clicked(ui))
+        
+        # remove maximize button
+        # window.setWindowFlags(window.windowFlags() & ~Qt.WindowMaximizeButtonHint)
+        
+        # remove header
+        # window.setWindowFlags(Qt.Window | Qt.CustomizeWindowHint)
 
-# remove maximize button
-# window.setWindowFlags(window.windowFlags() & ~Qt.WindowMaximizeButtonHint)
-
-# remove header
-# window.setWindowFlags(Qt.Window | Qt.CustomizeWindowHint)
-
-# set fixed size
-window.setFixedSize(1300, 730)
+        # set fixed size
+        window.setFixedSize(1300, 730)

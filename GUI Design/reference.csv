@@ -2,8 +2,10 @@ Name,Brand,Ram,Rom,Display,Battery,Price,Website
 "realme 9i (Prism Blue, 64 GB)",realme,4 GB RAM,64 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,15999,PhoneDB
 "realme 9i (Prism Black, 64 GB)",realme,4 GB RAM,64 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,15999,PhoneDB
 "realme 9i (Prism Blue, 128 GB)",realme,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,17999,PhoneDB
-"realme 9i (Prism Black, 128 GB)",realme,4 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,16999,PhoneDB
+"realme 9i (Prism Blue, 128 GB)",realme,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,17999,PhoneDB
 "realme 9i (Prism Blue, 128 GB)",realme,4 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,16999,PhoneArena
+"realme 9i (Prism Blue, 128 GB)",realme,4 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,16999,PhoneArena
+"realme 9i (Prism Black, 128 GB)",realme,4 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium ion Battery,16999,PhoneDB
 "POCO C31 (Shadow Gray, 64 GB)",POCO,4 GB RAM,64 GB ROM,16.59 cm (6.53 inch) HD+ Display,5000 mAh Lithium-ion Polymer Battery,11999,PhoneDB
 "REDMI 9i Sport (Metallic Blue, 64 GB)",REDMI,4 GB RAM,64 GB ROM,16.59 cm (6.53 inch) HD+ Display,5000 mAh Li-Polymer Battery,9999,PhoneDB
 "REDMI 9i Sport (Coral Green, 64 GB)",REDMI,4 GB RAM,64 GB ROM,16.59 cm (6.53 inch) HD+ Display,5000 mAh Li-Polymer Battery,9999,PhoneDB
@@ -18,45 +20,76 @@ Name,Brand,Ram,Rom,Display,Battery,Price,Website
 "MOTOROLA g52 (Charcoal Grey, 128 GB)",MOTOROLA,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium Battery,19999,PhoneDB
 "MOTOROLA G32 (Mineral Gray, 64 GB)",MOTOROLA,4 GB RAM,64 GB ROM,16.64 cm (6.55 inch) Full HD+ Display,5000 mAh Lithium Polymer Battery,16999,PhoneDB
 "POCO M4 Pro 5G (Cool Blue, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
+"POCO M4 Pro 5G (Cool Blue, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
+"POCO M4 Pro 5G (Cool Blue, 128 GB)",POCO,8 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,21999,PhoneDB
+"POCO M4 Pro 5G (Cool Blue, 128 GB)",POCO,8 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,21999,PhoneDB
 "MOTOROLA g52 (Metallic White, 128 GB)",MOTOROLA,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium Battery,19999,PhoneDB
 "realme 9 (Sunburst Gold, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"realme 9 (Sunburst Gold, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"realme 9 (Sunburst Gold, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
+"realme 9 (Sunburst Gold, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
 "realme 9 (Meteor Black, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"realme 9 (Meteor Black, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"realme 9 (Meteor Black, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
 "realme 9 (Meteor Black, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
 "vivo T1X (Gravity Black, 64 GB)",vivo,4 GB RAM,64 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,16990,PhoneDB
 "vivo T1X (Space Blue, 64 GB)",vivo,4 GB RAM,64 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,16990,PhoneDB
 "realme 10 Pro+ 5G (Hyperspace, 128 GB)",realme,8 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,27999,PhoneDB
+"realme 10 Pro+ 5G (Hyperspace, 128 GB)",realme,8 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,27999,PhoneDB
+"realme 10 Pro+ 5G (Hyperspace, 128 GB)",realme,6 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,25999,PhoneDB
+"realme 10 Pro+ 5G (Hyperspace, 128 GB)",realme,6 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,25999,PhoneDB
 "vivo T1X (Gravity Black, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,17990,PhoneDB
+"vivo T1X (Gravity Black, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,17990,PhoneDB
+"vivo T1X (Gravity Black, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
+"vivo T1X (Gravity Black, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
 "vivo T1X (Space Blue, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,17990,PhoneDB
+"vivo T1X (Space Blue, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,17990,PhoneDB
+"vivo T1X (Space Blue, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
+"vivo T1X (Space Blue, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
 "realme 9 (Stargaze White, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
-"POCO M4 5G (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Lithium Ion Polymer Battery,18999,PhoneDB
-"realme 9 (Sunburst Gold, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
+"realme 9 (Stargaze White, 128 GB)",realme,8 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,22999,PhoneDB
 "realme 9 (Stargaze White, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"realme 9 (Stargaze White, 128 GB)",realme,6 GB RAM,128 GB ROM,16.26 cm (6.4 inch) Full HD+ AMOLED Display,5000 mAh Lithium Ion Battery,20999,PhoneDB
+"POCO M4 5G (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Lithium Ion Polymer Battery,18999,PhoneDB
 "REDMI 10 (Pacific Blue, 64 GB)",REDMI,4 GB RAM,64 GB ROM,17.02 cm (6.7 inch) HD+ Display,6000 mAh Lithium Polymer Battery,14999,PhoneDB
 "MOTOROLA G32 (Satin Silver, 64 GB)",MOTOROLA,4 GB RAM,64 GB ROM,16.64 cm (6.55 inch) Full HD+ Display,5000 mAh Lithium Polymer Battery,16999,PhoneDB
 "POCO M4 Pro (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "POCO M4 Pro (Yellow, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "POCO M4 Pro 5G (Power Black, 128 GB)",POCO,8 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,21999,PhoneDB
+"POCO M4 Pro 5G (Power Black, 128 GB)",POCO,8 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,21999,PhoneDB
+"POCO M4 Pro 5G (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
+"POCO M4 Pro 5G (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "OPPO F19 Pro+ 5G (Space Silver, 128 GB)",OPPO,8 GB RAM,128 GB ROM,16.33 cm (6.43 inch) Full HD+ Display,4310 mAh Lithium-ion Polymer Battery,29990,PhoneDB
 "OPPO F19 Pro+ 5G (Fluid Black, 128 GB)",OPPO,8 GB RAM,128 GB ROM,16.33 cm (6.43 inch) Full HD+ Display,4310 mAh Lithium-ion Polymer Battery,29990,PhoneDB
 "vivo T1 44W (Starry Sky, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,19990,PhoneDB
-"POCO M4 Pro 5G (Power Black, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "vivo T1 44W (Midnight Galaxy, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,19990,PhoneDB
+"vivo T1 44W (Midnight Galaxy, 128 GB)",vivo,4 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,19990,PhoneDB
+"vivo T1 44W (Midnight Galaxy, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,20990,PhoneDB
+"vivo T1 44W (Midnight Galaxy, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,20990,PhoneDB
 "realme 10 Pro+ 5G (Dark Matter, 128 GB)",realme,6 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,25999,PhoneDB
 "POCO M4 5G (Power Black, 64 GB)",POCO,4 GB RAM,64 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Lithium Ion Polymer Battery,15999,PhoneDB
 "POCO M4 Pro (Cool Blue, 64 GB)",POCO,6 GB RAM,64 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,17999,PhoneDB
-"vivo T1X (Space Blue, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
 "POCO C31 (Shadow Gray, 32 GB)",POCO,3 GB RAM,32 GB ROM,16.59 cm (6.53 inch) HD+ Display,5000 mAh Lithium-ion Polymer Battery,10999,PhoneDB
-"POCO M4 Pro 5G (Cool Blue, 128 GB)",POCO,8 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,21999,PhoneDB
 "realme 10 Pro 5G (Nebula Blue, 128 GB)",realme,6 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,20999,PhoneDB
-"vivo T1 44W (Midnight Galaxy, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.36 cm (6.44 inch) Full HD+ AMOLED Display,5000 mAh Lithium Battery,20990,PhoneDB
 "MOTOROLA G60 (Moonless, 128 GB)",MOTOROLA,6 GB RAM,128 GB ROM,17.22 cm (6.78 inch) Full HD+ Display,6000 mAh Battery,21999,PhoneDB
 Nokia 105 SS,Nokia,32 MB RAM,32 MB ROM,4.5 cm (1.77 inch) QVGA Display,800 mAh Lithium Ion Battery,1599,PhoneDB
 "POCO M4 Pro (Power Black, 64 GB)",POCO,6 GB RAM,64 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,17999,PhoneDB
 "POCO M4 Pro 5G (Power Black, 64 GB)",POCO,4 GB RAM,64 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,16999,PhoneDB
 "realme C30 (Denim Black, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Denim Black, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Denim Black, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
+"realme C30 (Denim Black, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
 "realme C30 (Bamboo Green, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Bamboo Green, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Bamboo Green, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
+"realme C30 (Bamboo Green, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
 "realme C30 (Lake Blue, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Lake Blue, 32 GB)",realme,2 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,8499,PhoneDB
+"realme C30 (Lake Blue, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
+"realme C30 (Lake Blue, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
 "realme 10 Pro 5G (Dark Matter, 128 GB)",realme,8 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,22999,PhoneDB
+"realme 10 Pro 5G (Dark Matter, 128 GB)",realme,8 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,22999,PhoneDB
+"realme 10 Pro 5G (Dark Matter, 128 GB)",realme,6 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,20999,PhoneDB
 "realme 10 Pro 5G (Dark Matter, 128 GB)",realme,6 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,20999,PhoneDB
 "realme 10 Pro 5G (Hyperspace, 128 GB)",realme,6 GB RAM,128 GB ROM,17.07 cm (6.72 inch) Full HD+ Display,5000 mAh Battery,20999,PhoneDB
 "Infinix Smart 6 HD (Aqua Sky, 32 GB)",Infinix,2 GB RAM,32 GB ROM,16.76 cm (6.6 inch) HD+ Display,5000 mAh Lithium-ion Polymer Battery,8999,PhoneDB
@@ -65,15 +98,10 @@ Nokia 105 SS,Nokia,32 MB RAM,32 MB ROM,4.5 cm (1.77 inch) QVGA Display,800 mAh L
 "REDMI A1 (Black, 32 GB)",REDMI,2 GB RAM,32 GB ROM,16.56 cm (6.52 inch) Display,5000 mAh Battery,7998,PhoneDB
 "POCO M4 Pro 5G (Yellow, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.76 cm (6.6 inch) Full HD+ Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "realme 10 Pro+ 5G (Nebula Blue, 128 GB)",realme,6 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,25999,PhoneDB
-"realme 10 Pro+ 5G (Hyperspace, 128 GB)",realme,6 GB RAM,128 GB ROM,17.02 cm (6.7 inch) Full HD+ Display,5000 mAh Battery,25999,PhoneDB
 "POCO M4 Pro (Cool Blue, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,19999,PhoneDB
 "POCO X4 Pro 5G (Laser Blue, 128 GB)",POCO,6 GB RAM,128 GB ROM,16.94 cm (6.67 inch) Full HD+ Super AMOLED Display,5000 mAh Lithium-ion Polymer Battery,23999,PhoneDB
-"realme C30 (Bamboo Green, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
-"realme C30 (Lake Blue, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
 "SAMSUNG Galaxy F22 (Denim Blue, 64 GB)",SAMSUNG,4 GB RAM,64 GB ROM,16.26 cm (6.4 inch) HD+ Display,6000 mAh Lithium-ion Battery,14999,PhoneDB
-"realme C30 (Denim Black, 32 GB)",realme,3 GB RAM,32 GB ROM,16.51 cm (6.5 inch) HD+ Display,5000 mAh Lithium Ion Battery,9299,PhoneDB
 "MOTOROLA G62 5G (Midnight Gray, 128 GB)",MOTOROLA,6 GB RAM,128 GB ROM,16.64 cm (6.55 inch) Full HD+ Display,5000 mAh Lithium Polymer Battery,21999,PhoneDB
-"vivo T1X (Gravity Black, 128 GB)",vivo,6 GB RAM,128 GB ROM,16.71 cm (6.58 inch) Full HD+ Display,5000 mAh Battery,18990,PhoneDB
 "POCO M4 Pro (Yellow, 64 GB)",POCO,6 GB RAM,64 GB ROM,16.33 cm (6.43 inch) Full HD+ AMOLED Display,5000 mAh Lithium-ion Polymer Battery,17999,PhoneDB
 "REDMI Note 11 SE (Bifrost Blue, 64 GB)",REDMI,6 GB RAM,64 GB ROM,16.33 cm (6.43 inch) Full HD+ Display,5000 mAh Lithium Polymer Battery,16999,PhoneDB
 "Infinix Smart 6 HD (Force Black, 32 GB)",Infinix,2 GB RAM,32 GB ROM,16.76 cm (6.6 inch) HD+ Display,5000 mAh Lithium-ion Polymer Battery,8999,PhoneDB

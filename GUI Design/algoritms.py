@@ -16,15 +16,27 @@ def selection_sort(arr):
                 min_index = j 
         arr[i], arr[min_index] = arr[min_index], arr[i] # Swap function
 
-def insertion_sort(arr):
+# def insertion_sort(arr):
+#     n = len(arr)
+#     for i in range(1, n):
+#         key = arr[i] 
+#         j = i-1
+#         while j >= 0 and key < arr[j]:
+#             arr[j+1] = arr[j] # Swap function
+#             j -= 1
+#         arr[j+1] = key
+
+def insertion_sort(arr,col):
     n = len(arr)
     for i in range(1, n):
-        key = arr[i] 
+        key = arr[i]
+        keyCol = arr[i][col]
         j = i-1
-        while j >= 0 and key < arr[j]:
+        while j >= 0 and keyCol < arr[j][col]:
             arr[j+1] = arr[j] # Swap function
             j -= 1
         arr[j+1] = key
+    return arr
 
 def merge_sort(arr):
     if len(arr) > 1:
@@ -224,6 +236,19 @@ def cycle_sort(arr):
                 pos += 1
             arr[pos], item = item, arr[pos]
             writes += 1
+
+def binary_search(arr, low, high, x):
+    if high >= low:
+        mid = low + (high - low)//2
+
+        if arr[mid] == x:
+            return mid
+        elif arr[mid] > x:
+            return binary_search(arr, low, mid-1, x)
+        else:
+            return binary_search(arr, mid+1, high, x)
+    else:
+        return -1
 
 def main():
     pass

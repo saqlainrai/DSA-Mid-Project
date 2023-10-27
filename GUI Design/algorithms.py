@@ -6,6 +6,7 @@ def bubble_sort(arr):
         for j in range(0, n-i-1): # Last i elements are already in place
             if arr[j] > arr[j+1]:
                 arr[j], arr[j+1] = arr[j+1], arr[j] # Swap function
+    return arr
 
 def selection_sort(arr):
     n = len(arr)
@@ -15,24 +16,14 @@ def selection_sort(arr):
             if arr[min_index] > arr[j]:
                 min_index = j 
         arr[i], arr[min_index] = arr[min_index], arr[i] # Swap function
+    return arr
 
-# def insertion_sort(arr):
-#     n = len(arr)
-#     for i in range(1, n):
-#         key = arr[i] 
-#         j = i-1
-#         while j >= 0 and key < arr[j]:
-#             arr[j+1] = arr[j] # Swap function
-#             j -= 1
-#         arr[j+1] = key
-
-def insertion_sort(arr,col):
+def insertion_sort(arr):
     n = len(arr)
     for i in range(1, n):
-        key = arr[i]
-        keyCol = arr[i][col]
+        key = arr[i] 
         j = i-1
-        while j >= 0 and keyCol < arr[j][col]:
+        while j >= 0 and key < arr[j]:
             arr[j+1] = arr[j] # Swap function
             j -= 1
         arr[j+1] = key
@@ -69,12 +60,14 @@ def merge_sort(arr):
             arr[k] = R[j] 
             j+= 1
             k+= 1
+    return arr
 
 def quick_sort(arr, low, high):
     if low < high:
         pi = partition(arr, low, high) # pi is partitioning index, arr[p] is now at right place
         quick_sort(arr, low, pi-1) # Separately sort elements before partition and after partition
         quick_sort(arr, pi+1, high)
+    return arr
 
 def partition(arr, low, high):
     i = low-1 # index of smaller element
@@ -118,35 +111,75 @@ def heapify(arr, n, i):
         arr[i], arr[largest] = arr[largest], arr[i] # Swap function
         heapify(arr, n, largest)
 
+def counting_sort_p(input):
+    l = min(input)
+    k = max(input) - l
+    for x in range(len(input)):
+        input[x] -= l
+
+    count =[0 for x in range(k+1)]
+    for i in range(len(input)):
+        count[input[i]] += 1
+
+    for j in range(1, len(count)):
+        count[j] += count[j-1]
+
+    final = [0 for x in range(len(input))]
+    for x in range(len(input)):
+        ref = count[input[x]]-1
+        count[input[x]] -= 1
+        final[ref] = input[x]
+
+    for x in range(len(final)):
+        final[x] += l
+    return final
+
 def counting_sort(arr):
-    n = len(arr)
-    output = [0] * n
-    count = [0] * 10
-
-    # Store count of each element
-    for i in range(0, n):
-        count[arr[i]] += 1
-
-    for i in range(1, 10):
-        count[i] += count[i-1]
-
-    # Build the output array
-    i = n-1
-    while i >= 0:
-        output[count[arr[i]]-1] = arr[i]
-        count[arr[i]] -= 1
-        i -= 1
-
-    # Copy the output array to arr, so that arr now contains sorted numbers
-    for i in range(0, n):
-        arr[i] = output[i]
+    max_value = max(arr)
+    min_value = min(arr)
+    range_of_values = max_value - min_value + 1
+    # Create the count array to store the frequency of each value
+    count = [0] * range_of_values
+    # Populate the count array
+    for value in arr:
+        count[value - min_value] += 1
+    # Reconstruct the sorted array from the count array
+    sorted_arr = []
+    for i in range(range_of_values):
+        sorted_arr.extend([i + min_value] * count[i])
+    return sorted_arr
 
 def radix_sort(arr):
     max1 = max(arr)
     exp = 1
     while max1//exp > 0:
-        counting_sort(arr)
+        arr = counting_sort(arr)
         exp *= 10
+    return arr
+
+def bucket_sort_p(arr):
+    min_val = min(arr)
+    max_val = max(arr)
+
+    num_buckets = 10
+
+    bucket_range = (max_val - min_val) / num_buckets
+
+    buckets = [[] for _ in range(num_buckets)]
+
+    for num in arr:
+        # Calculate the bucket index
+        index = min(int((num - min_val) / bucket_range), num_buckets - 1)
+        buckets[index].append(num)
+
+    for i in range(num_buckets):
+        buckets[i] = insertion_sort(buckets[i])
+
+    sorted_arr = []
+    for bucket in buckets:
+        sorted_arr.extend(bucket)
+
+    return sorted_arr
 
 def bucket_sort(arr):
     bucket = []
@@ -184,6 +217,7 @@ def shell_sort(arr):
                 j -= gap
             arr[j] = temp
         gap //= 2
+    return arr
 
 def index_sort(arr):
     n = len(arr)
@@ -206,6 +240,7 @@ def index_sort(arr):
 
     for i in range(0, n):
         arr[i] = output_arr[i]
+    return arr
 
 def cycle_sort(arr):
     writes = 0
@@ -236,6 +271,7 @@ def cycle_sort(arr):
                 pos += 1
             arr[pos], item = item, arr[pos]
             writes += 1
+    return arr
 
 def binary_search(arr, low, high, x):
     if high >= low:

@@ -1,20 +1,25 @@
 # This is an affilated file Form.py 
 # This implement the functional logic of the GUI
 
-from PyQt5 import QtWidgets
-from PyQt5.QtWidgets import QMainWindow, QTableWidget, QTableWidgetItem, QPushButton, QFileDialog
-from PyQt5 import QtCore, QtGui, QtWidgets
-import csv
-import time
+from PyQt5.QtWidgets import QMainWindow, QTableWidgetItem, QFileDialog
 from PyQt5.QtGui import QStandardItemModel, QStandardItem
-from algoritms import *
-import pandas as pd
-from functools import partial
+from PyQt5 import QtCore, QtWidgets
 from PyQt5.uic import loadUi
+from functools import partial
+import pandas as pd
+import time
+import csv
+
+from algorithms import *
+from All_Algorithms import *
+
+fields = ['Name', 'Brand', 'Ram (GB)', 'Rom (GB)', 'Display (cm)', 'Battery (mAh)', 'Price', 'Website']
+algorithms = ['Bubble Sort', 'Insertion Sort', 'Selection Sort', 'Merge Sort', 'Quick Sort', 'Counting Sort', 'Radix Sort', 'Bucket Sort']
+df = pd.read_csv('unique.csv')
 
 class Mainwindow(QMainWindow):
     def __init__(self):
-        super(Mainwindow,self).__init__()
+        super(Mainwindow, self).__init__()
         loadUi("smart.ui",self) # Here we imported the QT Designer file which we made as Python GUI FIle.
         
         # Command to remove the default Windows Frame Design.
@@ -29,26 +34,46 @@ class Mainwindow(QMainWindow):
         # # Function to load the previous data of student at the start of program.
         # self.load_table()
         
-        # #Button Functions
-        # self.AddButton.clicked.connect(self.Add_student)
-        # self.DeleteButton.clicked.connect(self.Delete_student)
-        # self.EditButton.clicked.connect(self.edit_student)
-        # self.StuInfoTable.clicked.connect(self.fill_values)
-        
-        path = 'data.csv'
-        self.loadBtn.clicked.connect(partial(self.tableViewLoad, path))
+        # self.loadBtn.clicked.connect(self.tableViewLoad(self, data))
+        self.loadBtn.clicked.connect(partial(self.tableViewLoad, df))
         self.sortBtn.clicked.connect(self.sort_clicked)
         self.searchBtn.clicked.connect(self.search_clicked)
+        self.sortSelect.activated.connect(self.update_Column_Options)
 
-    def tableViewLoad(self, path):
+    def update_Column_Options(self):
+        index = self.sortSelect.currentIndex()
+        if index == 8 or index == 6 or index == 7:
+            self.set_column_options()
+        else:
+            self.reset_column_options()
+
+    def set_column_options(self):
+        self.columnSelect.clear()
+        if self.sortSelect.currentIndex() == 8:
+            self.columnSelect.addItems(["---Select a Column---", "Ram (GB)", "Rom (GB)", "Display (cm)", "Battery (mAh)"])
+        else:
+            self.columnSelect.addItems(["---Select a Column---", "Ram (GB)", "Rom (GB)", "Battery (mAh)"])
+        self.orderSelect.clear()
+        self.orderSelect.addItems(["---Select a Type---", "Single Column"])
+
+    def reset_column_options(self):
+        self.columnSelect.clear()
+        self.columnSelect.addItems(["---Select a Column---", "Name", "Brand", "Ram (GB)", "Rom (GB)", "Display (cm)", "Battery (mAh)", "Price", "Website"])
+        self.orderSelect.clear()
+        self.orderSelect.addItems(["---Select a Type---", "Single Column", "Whole Data"])
+
+    def tableViewLoad(self, data):
         self.model = QStandardItemModel()
         self.tableView.setModel(self.model)
 
-        file_path = 'data.csv'                            # Change this to your CSV file path
         try:
-            data = pd.read_csv(path)
+            # data = pd.read_csv(path)
             self.model.setRowCount(data.shape[0])
             self.model.setColumnCount(data.shape[1])
+
+            for col, header in enumerate(data.columns):
+                header_item = QStandardItem(header)
+                self.model.setHorizontalHeaderItem(col, header_item)
 
             for row in range(data.shape[0]):
                 for col in range(data.shape[1]):
@@ -91,222 +116,139 @@ class Mainwindow(QMainWindow):
                                 table.setItem(row_position, column, item)
 
     def sort_clicked(self):
-        sort_algo = self.sortSelect.currentText()
-        column = self.columnSelect.currentText()
-        self.searchSelect.setCurrentIndex(0)
-        
-        # try:
-        df = pd.read_csv('data.csv')
-        # df = df.sort_values(by=[column])
-        if self.columnSelect.currentText() != "---Select a Column---" and self.sortSelect.currentText() != "---Select an Algorithm---":
-            name = df[column].values.tolist()
-            data = list(csv.reader(open('data.csv')))[1:]
-            #insertion_sort(name)
-            # data = insertion_sort(data,0)
+        if self.columnSelect.currentIndex() != 0 and self.sortSelect.currentIndex() != 0:
+            sort_algo = self.sortSelect.currentText()
+            algo = algorithms.index(sort_algo)
+            column = self.columnSelect.currentText()
+            self.searchSelect.setCurrentIndex(0)
+            self.commentBox.setText("Sorting the Data...")
+            
+            column_data = df[column].values.tolist() 
+            
+            arr2d = fromFrameToArray(df, fields)                       # Converting data frame in 2d array
+
+            # ---------------------  Applying Sorting Algorithms  ---------------------------------------
+
             start_time = time.time()
-            connect_selection(sort_algo, data)
-            end_time = time.time()
-            self.timeTaken.setPlainText(str(end_time - start_time))    # Show the time Taken 
-            sorted_Data =pd.DataFrame(data)
-            sorted_Data.to_csv("reference2.csv", index=False)
-            sorted_df = pd.DataFrame({'Name': name})
-            df = df.merge(sorted_df, on='Name')
-            df.to_csv("reference.csv", index=False)
-            self.tableViewLoad("reference2.csv")
+            if self.orderSelect.currentIndex() == 0:
+                self.commentBox.setText("Select the Type of Sorting")
+            else:
+                self.commentBox.setText("Sorting Your Data...")
+                data = []
+                if self.orderSelect.currentIndex() == 1:
+                    data = df[column].values.tolist()
+                    data = connect_selection_single(algo, data)
+                    data = pd.DataFrame({column: data})                           # make a new data frame and show it only
+
+                elif self.orderSelect.currentIndex() == 2:
+                    arr2d = connect_selection_2d(algo, arr2d, fields.index(column))         # sorting the 2d array on the basics of provided column which will be row in 2d array
+                    data = fromArrayToFrame(arr2d)                                          # Converting 2d array to data frame
+                
+                end_time = time.time()
+                self.timeTaken.setPlainText(str(end_time - start_time))    # Show the time Taken 
+
+            #----------------------------------------------------------------------------------------------
+
+                self.tableViewLoad(data)
+                self.commentBox.setText("Data Sorted Successfully")
         else:
             self.commentBox.setText("Select the Valid Queries")
-        # except:
-                # print("Select a Valid Column Name")
-        # self.connect_selection(sort_algo)
 
     def search_clicked(self):
-            import time
+        if self.columnSelect.currentIndex() != 0 and self.searchSelect.currentIndex() != 0:
+            self.sortSelect.setCurrentIndex(2)
+            self.sort_clicked()
             self.sortSelect.setCurrentIndex(0)
             self.orderSelect.setCurrentIndex(0)
 
             column = self.columnSelect.currentText()
 
-            if self.searchBar.toPlainText() == "Search...":
-                    self.commentBox.setText("Enter a Valid Search Query")
-            elif self.columnSelect.currentText() == "Select a Column":
-                    self.commentBox.setText("Enter a Valid Column Name")
+            if self.searchBar.toPlainText() != "Search...":
+                search_query = self.searchBar.toPlainText()
+                self.searchBar.setPlainText("Search...")
+                # df = pd.read_csv('data.csv')
+                name = df[column].values.tolist()
+
+                print("Length of 2d Array: ", len(name))
+                x = -1
+                x = binary_search(name, 0, len(name)-1, search_query)
+                if x != -1:
+                        self.commentBox.setText("Search Founded Successfully")
+                        # self.commentBox.setText(name[x] + " Found" + " on index " + str(x))
+                else:
+                        self.commentBox.setText("Not Found")
             else:
-                    search_query = self.searchBar.toPlainText()
-                    self.searchBar.setPlainText("Search...")
-                    df = pd.read_csv('data.csv')
-                    name = df[column].values.tolist()
-                    self.commentBox.setText(str(len(name)))
-                    # time.sleep(1000)
-                    x = -1
-                    x = binary_search(name, 0, len(name)-1, search_query)
-                    if x != -1:
-                            self.commentBox.setText(name[x] + " Found" + " on index " + str(x))
-                    else:
-                            self.commentBox.setText("Not Found")
+                self.commentBox.setText("Enter a Valid Text to Search")
+        else:
+            self.commentBox.setText("Enter a Valid Search Query")
 
     def button_click_action():
             # This is where you define the code to execute when the button is clicked
             print("Button Clicked")
 
-    # This functions allows the user to select the value from the table to edit or delete
-    # the information of the students.
-    def fill_values(self):
-        row = self.StuInfoTable.currentRow()
-        self.NameEdit.setText(self.StuInfoTable.item(row,0).text())
-        self.RegEdit.setText(self.StuInfoTable.item(row,1).text())
-        self.gpaEdit.setText(self.StuInfoTable.item(row,2).text())
-        self.NumberEdit.setText(self.StuInfoTable.item(row,3).text())
-        self.uniEdit.setText(self.StuInfoTable.item(row,4).text())
+def connect_selection_2d(algo, data, index):
+    if algo == 0:
+        data = BubbleSort(data, index)
+    elif algo == 1:
+        data = InsertionSort(data, index)
+    elif algo == 2:
+        data = SelectionSort(data, index)
+    elif algo == 3:
+        data = MergeSort(data, index)
+    elif algo == 4:
+        data = byQuickSort(data, index)
+    else:
+        pass
+    return data
 
-    # This is a helping function to put the text fields back after adding or editing a STudent.
-    def resetValues(self):
-        self.NameEdit.setText("Student Name")
-        self.RegEdit.setText("Registration Number")
-        self.gpaEdit.setText("GPA")
-        self.NumberEdit.setText("Number")
-        self.uniEdit.setText("University")
+def connect_selection_single(algo, data):
+    if algo == 0:
+        data = bubble_sort(data)
+    elif algo == 1:
+        data = insertion_sort(data)
+    elif algo == 2:
+        data = selection_sort(data)
+    elif algo == 3:
+        data = merge_sort(data)
+    elif algo == 4:
+        data = quick_sort(data, 0, len(data)-1)
+    elif algo == 5:
+        data = counting_sort(data)
+    elif algo == 6:
+        data = radix_sort(data)
+    elif algo == 7:
+        data = bucket_sort_p(data)
+    else:
+        pass
+    return data
 
-    #This is also a helping function to put a validation that student of same registration should not be added.
-    def Check_regNo(self,reg): 
-        print(reg)
-        with open('student.csv', 'r',encoding="utf-8",newline="") as fileInput:
-            data = list(csv.reader(fileInput))
-            print(data)
-            for row in data:
-                print(row[1])
-                if reg == row[1]:
-                    print("hi")
-                    return False
-        return True
+def fromArrayToFrame(arr):
+    data = {
+        'Name': arr[0],
+        'Brand': arr[1],
+        'Ram (GB)': arr[2],
+        'Rom (GB)': arr[3],
+        'Display (cm)': arr[4],
+        'Battery (mAh)': arr[5],
+        'Price': arr[6],
+        'Website': arr[7]
+    }
+    data = pd.DataFrame(data)
+    return data
 
-    # This Function will take some values from the textfields and will add the data of student to the 
-    # CSV FIle if the registration number is Written is not added before.
-    def Add_student(self):
-        name = self.NameEdit.text()
-        regNo = self.RegEdit.text()
-        gpa = self.gpaEdit.text()
-        number = self.NumberEdit.text()
-        uni = self.uniEdit.text()
+def fromFrameToArray(df, field):
+    arr = []
+    for i in field:
+        arr.append(df[i].values.tolist())
+    return arr
 
-        if(regNo != "Registration Number" and self.Check_regNo(regNo)):
-            
-            student_data = [name,regNo,gpa,number,uni]
-
-            with open('student.csv', 'a+',encoding="utf-8",newline="") as fileInput:
-                writer = csv.writer(fileInput)
-                writer.writerows([student_data])
-            self.resetValues()
-        else:
-            msg=QMessageBox()
-            msg.setWindowTitle("--- Add a Student ---")
-            msg.setText("Registration Number is already Added.")
-            msg.setIcon(QMessageBox.Information)
-            msg.setStandardButtons(QMessageBox.Ok|QMessageBox.Cancel)
-            font=QtGui.QFont()
-            font.setPointSize(12)
-            font.setBold(True)
-            font.setWeight(75)
-            msg.setFont(font)
-            msg.exec()
-        
-        #This is to reload the table so that recent added data shows in the table
-        self.load_table()
-        
-    # This FUnction will take values from the table and will edit new values according to previous
-    # registration  number.
-    def edit_student(self):
-        row = self.StuInfoTable.currentRow()
-        old_id = self.StuInfoTable.item(row,1).text()
-        name = self.NameEdit.text()
-        regNo = self.RegEdit.text()
-        gpa = self.gpaEdit.text()
-        number = self.NumberEdit.text()
-        uni = self.uniEdit.text()
-
-        index_student = None
-        updated_data = []
-        with open('student.csv', "r", encoding="utf-8") as fileInput:
-            reader = csv.reader(fileInput)
-            counter = 0
-            for row in reader:
-                if len(row) > 0:
-                    if old_id == row[1]:
-                        student_found = True
-                        student_data = []
-                        student_data.append(name)
-                        student_data.append(regNo)
-                        student_data.append(gpa)
-                        student_data.append(number)
-                        student_data.append(uni)
-                        updated_data.append(student_data)
-                    else:
-                        updated_data.append(row)
-                    
-        if student_found is True:
-            fileName = 'C:/Users/monti/A-CRUD/students.csv'
-            with open('student.csv', "w", encoding="utf-8",newline="") as fileInput:
-                writer = csv.writer(fileInput)
-                writer.writerows(updated_data)
-            self.load_table()
-            self.resetValues()
-
-    # This Function will delete the student from the csv file depending upon the reg Number.
-    def Delete_student(self):
-        if(self.RegEdit.text() != "Registration Number"):
-            ID = self.RegEdit.text()
-            student_found = False
-            updated_data = []
-            with open('student.csv', "r", encoding="utf-8") as fileInput:
-                reader = csv.reader(fileInput)
-                for row in reader:
-                    if len(row) > 0:
-                        if ID != row[1]:
-                            updated_data.append(row)
-                        else:
-                            student_found = True
-            
-
-            if student_found is True:
-                with open('student.csv', "w", encoding="utf-8", newline="") as fileInput:
-                    writer = csv.writer(fileInput)
-                    writer.writerows(updated_data)
-                self.load_table()
-                self.resetValues()
-
-    # This is a helping Function to load the content of the table after every event.
-    def load_table(self):
-        with open('student.csv', "r",encoding="utf-8") as fileInput:
-            roww = 0
-            data = list(csv.reader(fileInput))
-            
-            self.StuInfoTable.setRowCount(len(data))
-            for row in data:
-                self.StuInfoTable.setItem(roww, 0 , QtWidgets.QTableWidgetItem((row[0])))
-                self.StuInfoTable.setItem(roww, 1 , QtWidgets.QTableWidgetItem((row[1])))
-                self.StuInfoTable.setItem(roww, 2 , QtWidgets.QTableWidgetItem((row[2])))
-                self.StuInfoTable.setItem(roww, 3 , QtWidgets.QTableWidgetItem((row[3])))
-                self.StuInfoTable.setItem(roww, 4 , QtWidgets.QTableWidgetItem((row[4])))
-                roww =+ 1
-# main
-
-def connect_selection(algo, data):
-        if algo == "Bubble Sort":
-            bubble_sort(data)
-            return 0
-        elif algo == "Insertion Sort":
-            insertion_sort(data)
-            return 0
-        elif algo == "Selection Sort":
-            selection_sort(data)
-            return 0
-        elif algo == "Merge Sort":
-            merge_sort(data)
-            return 0
-        elif algo == "Quick Sort":
-            quick_sort(data, 0, len(data)-1)
-            return 0
-        else:
-            return -1
+def reset_values(self):
+    self.searchBar.setPlainText("Search...")
+    self.columnSelect.setCurrentIndex(0)
+    self.sortSelect.setCurrentIndex(0)
+    self.orderSelect.setCurrentIndex(0)
+    self.timeTaken.setPlainText("0.0")
+    self.commentBox.setText("Let's Enjoy the benefits of Smart Sorter and Have a Bird Eye View...")
 
 def main():
         import sys
